@@ -56,13 +56,12 @@ namespace IRDb.Repositories
             movie.Title = request.Title;
             movie.Genre = request.Genre;
             movie.Rating = request.Rating;
+            movie.Year = request.Year;
+
 
             await _context.SaveChangesAsync();
 
             return await _context.Movies.ToListAsync();
-
-
-
         }
     }
 }
