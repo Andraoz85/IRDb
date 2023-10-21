@@ -38,6 +38,11 @@ namespace IRDb.Repositories
             return movies;
         }
 
+        public Task<Movie> GetMovieById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<Movie?> GetSingleMovie(int id)
         {
             var movie = await _context.Movies.FindAsync(id);

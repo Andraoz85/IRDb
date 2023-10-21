@@ -3350,11 +3350,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\motal\\Projects\\IRDb\\IRDb.csproj",
+      "projectUniqueName": "C:\\Users\\motal\\Projects\\Internet Rulle DB\\IRDb\\IRDb.csproj",
       "projectName": "IRDb",
-      "projectPath": "C:\\Users\\motal\\Projects\\IRDb\\IRDb.csproj",
+      "projectPath": "C:\\Users\\motal\\Projects\\Internet Rulle DB\\IRDb\\IRDb.csproj",
       "packagesPath": "C:\\Users\\motal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\motal\\Projects\\IRDb\\obj\\",
+      "outputPath": "C:\\Users\\motal\\Projects\\Internet Rulle DB\\IRDb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

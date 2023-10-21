@@ -1,0 +1,63 @@
+﻿@page
+@model IRDb.Pages.Movies.CreateModel
+@{
+    ViewData["Title"] = "Add Movie";
+    Layout = "_Layout";
+}
+<h2>Add Movie</h2>
+
+<form id="addMovieForm">
+    <div>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required />
+    </div>
+    <div>
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="year" required />
+    </div>
+    <div>
+        <label for="genre">Genre:</label>
+        <input type="text" id="genre" name="genre" required />
+    </div>
+    <div>
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" name="rating" step="0.1" required />
+    </div>
+    <button type="button" id="submitButton">Add</button>
+</form>
+
+
+<script>
+    document.getElementById('submitButton').addEventListener('click', function () {
+        console.log("Button clicked");
+        var title = document.getElementById('title').value;
+        var year = document.getElementById('year').value;
+        var genre = document.getElementById('genre').value;
+        var rating = document.getElementById('rating').value;
+
+        var movieData = {
+            title: title,
+            year: year,
+            genre: genre,
+            rating: rating
+        };
+        console.log(title, year, genre, rating);
+
+
+        fetch('/api/Movie', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(movieData)
+        })
+            .then(response => response.json())
+            .then(data => {
+                alert('Movie added successfully!');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while adding the movie.');
+            });
+    });
+</script>
