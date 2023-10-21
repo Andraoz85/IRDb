@@ -1,11 +1,54 @@
 {
   "Version": 1,
-  "Hash": "AMYEOUiRyHceC+susEOcTCfCb+FgU6PNfPoBIZJ9rnE=",
+  "Hash": "LGgke1lDh/LQ0XydpZvgqUTEJPJw4XDtCLdFR03E7sA=",
   "Source": "IRDb",
   "BasePath": "_content/IRDb",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "IRDb\\wwwroot",
+      "Source": "IRDb",
+      "ContentRoot": "C:\\Users\\motal\\Projects\\Internet Rulle DB\\IRDb\\wwwroot\\",
+      "BasePath": "_content/IRDb",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\motal\\Projects\\Internet Rulle DB\\IRDb\\wwwroot\\css\\site.css",
+      "SourceId": "IRDb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\motal\\Projects\\Internet Rulle DB\\IRDb\\wwwroot\\",
+      "BasePath": "_content/IRDb",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\motal\\Projects\\Internet Rulle DB\\IRDb\\wwwroot\\js\\site.js",
+      "SourceId": "IRDb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\motal\\Projects\\Internet Rulle DB\\IRDb\\wwwroot\\",
+      "BasePath": "_content/IRDb",
+      "RelativePath": "js/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
+    }
+  ]
 }

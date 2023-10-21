@@ -1,0 +1,44 @@
+﻿@page
+@model IRDb.Pages.Movies.DeleteModel
+@{
+    ViewData["Title"] = "Delete Movie";
+    Layout = "_Layout";
+}
+
+<h2>Delete Movie</h2>
+<form id="deleteMovie">
+    <div>
+        <label for="movieDropdown">Choose the movie you want to delete:</label>
+        <select id="movieDropdown">
+            @foreach (var movie in Model.Movies)
+            {
+                <option value="@movie.Id">@movie.Title</option>
+            }
+        </select>
+
+        <button id="deleteButton">Delete</button>
+    </div>
+</form>
+
+
+
+<script>
+    document.getElementById('deleteButton').addEventListener('click', function () {
+
+        var movieDropdown = document.getElementById('movieDropdown');
+        var movieId = movieDropdown.options[movieDropdown.selectedIndex].value;
+
+        fetch('/api/Movie/' + movieId, {
+            method: 'DELETE'
+        })
+            .then(response => response.json())
+            .then(data => {
+                alert('Movie deleted successfully!');
+                location.reload();
+            })
+            .catch(error => {
+                console.error('Error:', error.message);
+                alert('An error occurred while deleting the movie.');
+            });
+    });
+</script>

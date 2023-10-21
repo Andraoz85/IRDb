@@ -1,0 +1,20 @@
+﻿@page
+@model IRDb.Pages.Movies.IndexModel
+@{
+    ViewData["Title"] = "Movie Index";
+    Layout = "_Layout";
+}
+
+<h2>Movies</h2>
+<div class="grid-container">
+    @foreach (var movie in Model.Movies)
+    {
+        <div class="grid-item">
+            <ul>
+                <li>
+                    <a href="/Movies/Details/@movie.Id">@movie.Title</a>
+                </li>
+            </ul>
+        </div>
+    }
+</div>

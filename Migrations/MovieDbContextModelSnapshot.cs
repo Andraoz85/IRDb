@@ -33,8 +33,8 @@ namespace IRDb.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Rating")
-                        .HasColumnType("float");
+                    b.Property<decimal>("Rating")
+                        .HasColumnType("decimal(3, 1)");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -46,6 +46,32 @@ namespace IRDb.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Movies");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Genre = "Action",
+                            Rating = 7.8m,
+                            Title = "Matrix",
+                            Year = 1999
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Genre = "Thriller",
+                            Rating = 8.6m,
+                            Title = "The Silence of the Lambs",
+                            Year = 1991
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Genre = "Drama",
+                            Rating = 8.7m,
+                            Title = "One Flew Over the Cuckoo's Nest",
+                            Year = 1975
+                        });
                 });
 #pragma warning restore 612, 618
         }
