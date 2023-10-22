@@ -36,14 +36,14 @@
         button, input[type="submit"] {
             background-color: #4CAF50;
             color: white;
-            border: none;
+            /* border: none; */
             padding: 0.5em 1em;
             text-align: center;
-            text-decoration: none;
+            /* text-decoration: none; */
             display: inline-block;
             font-size: 16px;
             margin: 4px 2px;
-            transition-duration: 0.4s;
+            /* transition-duration: 0.4s; */
             cursor: pointer;
         }
 
@@ -60,7 +60,7 @@
     </header>
 
     <nav>
-        <a href="/movies/index">Home</a> |
+        <a href="/movies/index">Movie Index</a> |
         <a href="/movies/create">Add Movie</a> |
         <a href="/movies/delete">Delete Movie</a> |
         <a href="/movies/update">Update Movie</a>
@@ -69,8 +69,5 @@
     <main role="main" class="pb-3">
         @RenderBody()
     </main>
-
-    <script src="~/js/site.js"></script>
-    @RenderSection("Scripts", required: false)
 </body>
 </html>

@@ -2,7 +2,7 @@ using IRDb.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace IRDb.Pages.Movies // Ändra detta till det faktiska namnrymden för din Razor-sida
+namespace IRDb.Pages.Movies
 {
     public class DeleteModel : PageModel
     {

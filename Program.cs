@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+
 builder.Services.AddControllers();
 builder.Services.AddRazorPages(); // Lägg till stöd för Razor Pages
 
@@ -24,10 +25,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.RoutePrefix = "swagger";
-    });
+    app.UseSwaggerUI();
     app.UseDeveloperExceptionPage();
 }
 
